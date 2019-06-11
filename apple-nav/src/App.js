@@ -2,13 +2,13 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 
-import navData from './data';
+import products from './data';
 import NavWrapper from './components/NavWrapper';
 import ProductPage from './components/ProductPage';
 
 class App extends React.Component {
   state = {
-    tabs: navData
+    products: products
   }
 
   render () {
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavWrapper />
-        <Route path='/:tabs' component={ProductPage}/>
+        <Route path='/:id' render={(props) => <ProductPage {...props} products={this.state.products} />}/>
       </div>
     );
   }

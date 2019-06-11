@@ -1,9 +1,12 @@
 import React from 'react';
 
-function ProductPage() {
+function ProductPage(props) {
+    const id = props.match.params.id;
+    const product = props.products.find(product => `${product.id}` === id)
+    console.log(id)
     return (
         <div>
-            product info
+            <h1>{product.title}</h1>
         </div>
     )
 }
