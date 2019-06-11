@@ -1,0 +1,10 @@
+nav {
+    background-color: #444;
+    padding: 20px;
+}
+
+.link {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
